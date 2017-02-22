@@ -10,17 +10,21 @@
         <Label x:Name="label" Content="Naam&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" />
         <Label x:Name="label2" Content="Achternaam" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" />
         <Label x:Name="label3" Content="Straat" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label4" Content="Woonplaats" HorizontalAlignment="Left" Margin="11,89,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label4" Content="Woonplaats" HorizontalAlignment="Left" Margin="14,117,0,0" VerticalAlignment="Top" />
         <Label x:Name="label5" Content="Huisnummer" HorizontalAlignment="Left" Margin="275,56,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label1" Content="Telefoonnummer" HorizontalAlignment="Left" Margin="11,120,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label6" Content="Email&#xD;&#xA;" HorizontalAlignment="Left" Margin="11,148,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="124,6,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="124,33,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="124,61,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="353,59,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="77" />
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" Margin="124,89,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="23" Margin="124,120,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="23" Margin="124,148,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
-        <Button x:Name="PersoonTvgnBtn" Content="Toevoegen" HorizontalAlignment="Left" Margin="124,201,0,0" VerticalAlignment="Top" Width="306" Height="30" />
+        <Label x:Name="label1" Content="Telefoonnummer" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label6" Content="Email&#xD;&#xA;" HorizontalAlignment="Left" Margin="14,176,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="naamTb" HorizontalAlignment="Left" Height="23" Margin="124,6,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="achternaamTb" HorizontalAlignment="Left" Height="23" Margin="124,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="straatTb" HorizontalAlignment="Left" Height="23" Margin="124,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="huisnmrTb" HorizontalAlignment="Left" Height="23" Margin="353,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" />
+        <TextBox x:Name="woonplaatsTb" HorizontalAlignment="Left" Height="23" Margin="124,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="telefoonnmrTb" HorizontalAlignment="Left" Height="23" Margin="124,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="emailTb" HorizontalAlignment="Left" Height="23" Margin="124,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Button x:Name="PersoonTvgnBtn" Content="Toevoegen" HorizontalAlignment="Left" Margin="115,219,0,0" VerticalAlignment="Top" Width="306" Height="30" Click="PersoonTvgnBtn_Click" />
+        <TextBox x:Name="postcodeTb" HorizontalAlignment="Left" Height="23" Margin="124,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="label7" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top">
+            <Label x:Name="label8" Content="Postcode" />
+        </Label>
     </Grid>
 </Window>

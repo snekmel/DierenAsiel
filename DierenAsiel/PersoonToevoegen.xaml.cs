@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DierenAsiel.Models;
 
 namespace DierenAsiel
 {
@@ -19,9 +20,28 @@ namespace DierenAsiel
     /// </summary>
     public partial class PersoonToevoegen : Window
     {
-        public PersoonToevoegen()
+        private List<Persoon> _personenLijst;
+
+        public PersoonToevoegen(List<Persoon> PersonenLijst)
         {
             InitializeComponent();
+            _personenLijst = PersonenLijst;
+        }
+
+        private void PersoonTvgnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Persoon p = new Persoon();
+            p.Naam = naamTb.Text;
+            p.Achternaam = achternaamTb.Text;
+            p.Woonplaats = woonplaatsTb.Text;
+            p.Straat = straatTb.Text;
+            p.Huisnummer = int.Parse(huisnmrTb.Text);
+            p.Postcode = postcodeTb.Text;
+            p.Telefoonnummer = int.Parse(telefoonnmrTb.Text);
+            p.Email = emailTb.Text;
+
+            _personenLijst.Add(p);
+            System.Windows.MessageBox.Show("Gebruiker" + p.Naam + "toegevoegd");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DierenAsiel.Models
 {
-    internal class Dier
+    public class Dier
     {
         //Enum
         public enum dierType
