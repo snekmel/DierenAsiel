@@ -7,13 +7,14 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="Het Dierenasiel" Height="796.029" Width="1622.573" WindowStyle="ToolWindow"
-        Background="LightYellow">
+        Background="LightBlue">
     <Grid HorizontalAlignment="Left" Height="746" Margin="276,10,0,0" VerticalAlignment="Top" Width="1318">
         <Grid.RowDefinitions>
             <RowDefinition Height="362*" />
             <RowDefinition Height="11*" />
         </Grid.RowDefinitions>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="290" Margin="10,424,0,0" VerticalAlignment="Top" Width="1298" />
-        <GroupBox x:Name="Reserveringen" Header="Reserveringen" HorizontalAlignment="Center" Margin="15,10,5,0" VerticalAlignment="Top" Height="239" Width="1298" />
+        <DatePicker HorizontalAlignment="Left" Margin="46,34,0,0" VerticalAlignment="Top" Height="32" Width="938" />
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="212" Margin="46,140,0,0" VerticalAlignment="Top" Width="938" />
+        <Label x:Name="label" Content="Dieren die gereserveerd zijn voor vandaag:&#xD;&#xA;" HorizontalAlignment="Left" Margin="46,97,0,0" VerticalAlignment="Top" Height="43" Width="464" />
     </Grid>
 </Window>
