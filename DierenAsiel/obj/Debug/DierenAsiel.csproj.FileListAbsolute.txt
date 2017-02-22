@@ -1,0 +1,14 @@
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\bin\Debug\DierenAsiel.exe.config
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\bin\Debug\DierenAsiel.exe
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\bin\Debug\DierenAsiel.pdb
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierenAsiel.csprojResolveAssemblyReference.cache
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\MainWindow.g.cs
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\App.g.cs
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierenAsiel_MarkupCompile.cache
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierenAsiel_MarkupCompile.lref
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\MainWindow.baml
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierenAsiel.g.resources
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierenAsiel.Properties.Resources.resources
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierenAsiel.csproj.GenerateResource.Cache
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierenAsiel.exe
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierenAsiel.pdb

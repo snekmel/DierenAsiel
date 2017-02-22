@@ -1,0 +1,19 @@
+﻿<Window x:Class="DierenAsiel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DierenAsiel"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="Het Dierenasiel" Height="796.029" Width="1622.573" WindowStyle="ToolWindow"
+        Background="LightYellow">
+    <Grid HorizontalAlignment="Left" Height="746" Margin="276,10,0,0" VerticalAlignment="Top" Width="1318">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="362*" />
+            <RowDefinition Height="11*" />
+        </Grid.RowDefinitions>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="290" Margin="10,424,0,0" VerticalAlignment="Top" Width="1298" />
+        <GroupBox x:Name="Reserveringen" Header="Reserveringen" HorizontalAlignment="Center" Margin="15,10,5,0" VerticalAlignment="Top" Height="239" Width="1298" />
+    </Grid>
+</Window>
