@@ -18,6 +18,7 @@ namespace DierenAsiel.Models
         private string _naam;
 
         private DateTime _gebDatum;
+
         private DateTime _uitlaatDatum;
         private string _extraInfo;
         private dierType _diertype;

@@ -9,7 +9,6 @@
         Title="Het Dierenasiel" Height="754.029" Width="1340.573" WindowStyle="ToolWindow"
         Background="LightBlue">
     <Grid HorizontalAlignment="Left" Height="700" Margin="10,10,0,0" VerticalAlignment="Top" Width="1301">
-
         <DatePicker HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Height="32" Width="1012" />
         <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="212" Margin="34,72,0,0" VerticalAlignment="Top" Width="1012" />
         <Label x:Name="label" Content="Dieren die gereserveerd zijn voor vandaag:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,47,0,0" VerticalAlignment="Top" Height="43" Width="464" />
