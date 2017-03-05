@@ -14,3 +14,5 @@ C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierenAsiel.exe
 C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierenAsiel.pdb
 C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\PersoonToevoegen.g.cs
 C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\PersoonToevoegen.baml
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierToevoegen.g.cs
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierToevoegen.baml

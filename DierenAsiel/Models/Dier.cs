@@ -18,11 +18,10 @@ namespace DierenAsiel.Models
         private string _naam;
 
         private DateTime _gebDatum;
-
         private DateTime _uitlaatDatum;
         private string _extraInfo;
         private dierType _diertype;
-        private DateTime _reserveerDatum;
+
         private Persoon _vorigeEigenaar;
 
         //Getters / setters
@@ -30,12 +29,6 @@ namespace DierenAsiel.Models
         {
             get { return _vorigeEigenaar; }
             set { _vorigeEigenaar = value; }
-        }
-
-        public DateTime ReserveerDatum
-        {
-            get { return _reserveerDatum; }
-            set { _reserveerDatum = value; }
         }
 
         public dierType DierType

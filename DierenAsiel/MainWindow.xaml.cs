@@ -21,21 +21,44 @@ namespace DierenAsiel
         private List<Persoon> _personenLijst;
         private List<Dier> _dierenLijst;
 
+        public List<Persoon> Personenlijst
+        {
+            get { return _personenLijst; }
+            set { _personenLijst = value; }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
             _personenLijst = new List<Persoon>();
             _dierenLijst = new List<Dier>();
+
+            ViewLoader();
         }
 
         private void PersoonToevoegenBtn_Click(object sender, RoutedEventArgs e)
         {
-            PersoonToevoegen s = new PersoonToevoegen(_personenLijst);
+            PersoonToevoegen s = new PersoonToevoegen(_personenLijst, this);
             s.Show();
         }
 
         private void DierToevoegenBtn_Click(object sender, RoutedEventArgs e)
         {
+            DierToevoegen s = new DierToevoegen(_dierenLijst, this);
+            s.Show();
+        }
+
+        public void ViewLoader()
+        {
+            foreach (Persoon p in _personenLijst)
+            {
+                personenListview.Items.Add(p);
+            }
+
+            foreach (Dier d in _dierenLijst)
+            {
+                dierenListview.Items.Add(d);
+            }
         }
     }
 }

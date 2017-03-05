@@ -14,5 +14,35 @@
         <Label x:Name="label" Content="Dieren die gereserveerd zijn voor vandaag:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,47,0,0" VerticalAlignment="Top" Height="43" Width="464" />
         <Button x:Name="PersoonToevoegenBtn" Content="Persoon registreren" HorizontalAlignment="Left" Margin="1092,18,0,0" VerticalAlignment="Top" Width="191" Height="48" Click="PersoonToevoegenBtn_Click" />
         <Button x:Name="DierToevoegenBtn" Content="Dier registreren" HorizontalAlignment="Left" Margin="1092,72,0,0" VerticalAlignment="Top" Width="191" Height="52" Click="DierToevoegenBtn_Click" />
+        <Label x:Name="label2" Content="Datum" HorizontalAlignment="Left" Margin="34,367,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label3" Content="Dier" HorizontalAlignment="Left" Margin="34,398,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.421,-0.692" />
+        <Label x:Name="label4" Content="Persoon" HorizontalAlignment="Left" Margin="586,393,0,0" VerticalAlignment="Top" />
+        <Button x:Name="button" Content="Reserveer" HorizontalAlignment="Left" Margin="34,568,0,0" VerticalAlignment="Top" Width="325" Height="58" />
+        <ListView x:Name="personenListview" HorizontalAlignment="Left" Height="106" Margin="586,424,0,0" VerticalAlignment="Top" Width="460">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Naam" DisplayMemberBinding="{Binding Naam}" Width="50" />
+                    <GridViewColumn Header="Achternaam" DisplayMemberBinding="{Binding Achternaam}" Width="100" />
+                    <GridViewColumn Header="Woonplaats" DisplayMemberBinding="{Binding Woonplaats}" Width="100" />
+                    <GridViewColumn Header="TelefoonNummer" DisplayMemberBinding="{Binding telefoonNummer}" Width="100" />
+                    <GridViewColumn />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="dierenListview" HorizontalAlignment="Left" Height="106" Margin="34,424,0,0" VerticalAlignment="Top" Width="494">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Naam" DisplayMemberBinding="{Binding Naam}" Width="100" />
+                    <GridViewColumn Header="Soort" DisplayMemberBinding="{Binding DierType}" Width="100" />
+                    <GridViewColumn Header="Geboorte datum" DisplayMemberBinding="{Binding GeboorteDatum}" Width="100" />
+
+                    <GridViewColumn />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <GroupBox x:Name="groupBox" Header="Reserveer&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Height="364" Width="1273">
+            <DatePicker HorizontalAlignment="Left" Margin="68,26,0,0" VerticalAlignment="Top" Height="40" Width="372" />
+        </GroupBox>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="-186,393,0,0" VerticalAlignment="Top" />
     </Grid>
 </Window>

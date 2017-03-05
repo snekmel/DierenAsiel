@@ -21,11 +21,13 @@ namespace DierenAsiel
     public partial class PersoonToevoegen : Window
     {
         private List<Persoon> _personenLijst;
+        private MainWindow _mw;
 
-        public PersoonToevoegen(List<Persoon> PersonenLijst)
+        public PersoonToevoegen(List<Persoon> PersonenLijst, MainWindow mw)
         {
             InitializeComponent();
             _personenLijst = PersonenLijst;
+            _mw = mw;
         }
 
         private void PersoonTvgnBtn_Click(object sender, RoutedEventArgs e)
@@ -42,6 +44,7 @@ namespace DierenAsiel
 
             _personenLijst.Add(p);
             System.Windows.MessageBox.Show("Gebruiker" + p.Naam + "toegevoegd");
+            _mw.ViewLoader();
         }
     }
 }
