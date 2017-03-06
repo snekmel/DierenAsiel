@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace DierenAsiel.Models
 {
-    internal class Reserveer
+    internal class Reservering
     {
         public DateTime Reserveerdatum { get; set; }
         public DateTime Ophaaldatum { get; set; }
         public bool IsOpgehaald { get; set; }
+        public Persoon Persoon { get; set; }
+        public Dier Dier { get; set; }
     }
 }

@@ -21,7 +21,6 @@ namespace DierenAsiel.Models
         private DateTime _uitlaatDatum;
         private string _extraInfo;
         private dierType _diertype;
-
         private Persoon _vorigeEigenaar;
 
         //Getters / setters

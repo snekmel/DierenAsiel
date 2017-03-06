@@ -81,7 +81,7 @@
   <ItemGroup>
     <Compile Include="Models\Dier.cs" />
     <Compile Include="Models\Persoon.cs" />
-    <Compile Include="Models\Reserveer.cs" />
+    <Compile Include="Models\Reservering.cs" />
     <Compile Include="PersoonToevoegen.xaml.cs">
       <DependentUpon>PersoonToevoegen.xaml</DependentUpon>
     </Compile>

@@ -20,6 +20,7 @@ namespace DierenAsiel
     {
         private List<Persoon> _personenLijst;
         private List<Dier> _dierenLijst;
+        private List<Reservering> _reserveringLijst;
 
         public List<Persoon> Personenlijst
         {
@@ -32,7 +33,9 @@ namespace DierenAsiel
             InitializeComponent();
             _personenLijst = new List<Persoon>();
             _dierenLijst = new List<Dier>();
+            _reserveringLijst = new List<Reservering>();
 
+            TestData();
             ViewLoader();
         }
 
@@ -50,6 +53,10 @@ namespace DierenAsiel
 
         public void ViewLoader()
         {
+            ReserveringListview.Items.Clear();
+            personenListview.Items.Clear();
+            dierenListview.Items.Clear();
+
             foreach (Persoon p in _personenLijst)
             {
                 personenListview.Items.Add(p);
@@ -59,6 +66,45 @@ namespace DierenAsiel
             {
                 dierenListview.Items.Add(d);
             }
+
+            foreach (Reservering r in _reserveringLijst)
+            {
+                if (r.Reserveerdatum == datepicker.SelectedDate.Value)
+                {
+                    ReserveringListview.Items.Add(r);
+                }
+            }
+        }
+
+        public void TestData()
+        {
+            Persoon p = new Persoon();
+            p.Naam = "Naam";
+            p.Achternaam = "achternaam";
+            p.Woonplaats = "Eindhoven";
+            p.Straat = "Straat";
+            p.Huisnummer = 10;
+            p.Telefoonnummer = 0634810013;
+            _personenLijst.Add(p);
+
+            Dier d = new Dier();
+            d.Naam = "DierNaam";
+            d.GeboorteDatum = DateTime.Now.Date;
+            d.DierType = Dier.dierType.Hond;
+            _dierenLijst.Add(d);
+        }
+
+        private void reserveerBtnClick(object sender, RoutedEventArgs e)
+        {
+            Persoon p = (Persoon)personenListview.SelectedItem;
+            Dier d = (Dier)dierenListview.SelectedItem;
+
+            Reservering r = new Reservering();
+            r.Dier = d;
+            r.Persoon = p;
+            r.Reserveerdatum = DateTime.Now.Date;
+            r.Ophaaldatum = reserveringDatum.SelectedDate.Value;
+            _reserveringLijst.Add(r);
         }
     }
 }
