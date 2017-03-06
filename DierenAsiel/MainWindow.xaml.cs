@@ -34,6 +34,7 @@ namespace DierenAsiel
             _personenLijst = new List<Persoon>();
             _dierenLijst = new List<Dier>();
             _reserveringLijst = new List<Reservering>();
+            datepicker.SelectedDate = DateTime.Today.Date;
 
             TestData();
             ViewLoader();
@@ -53,23 +54,27 @@ namespace DierenAsiel
 
         public void ViewLoader()
         {
+            //Leeg de listviews
             ReserveringListview.Items.Clear();
             personenListview.Items.Clear();
             dierenListview.Items.Clear();
 
+            //Vul de personenlistview
             foreach (Persoon p in _personenLijst)
             {
                 personenListview.Items.Add(p);
             }
 
+            //Vul de dierenlistview
             foreach (Dier d in _dierenLijst)
             {
                 dierenListview.Items.Add(d);
             }
 
+            //Vul de reserveringen
             foreach (Reservering r in _reserveringLijst)
             {
-                if (r.Reserveerdatum == datepicker.SelectedDate.Value)
+                if (r.Ophaaldatum == datepicker.SelectedDate)
                 {
                     ReserveringListview.Items.Add(r);
                 }
@@ -96,15 +101,23 @@ namespace DierenAsiel
 
         private void reserveerBtnClick(object sender, RoutedEventArgs e)
         {
+            //Haal geselecteerde objecten op
             Persoon p = (Persoon)personenListview.SelectedItem;
             Dier d = (Dier)dierenListview.SelectedItem;
 
+            //Maak reservering aan en voeg toe aan de lijst
             Reservering r = new Reservering();
             r.Dier = d;
             r.Persoon = p;
             r.Reserveerdatum = DateTime.Now.Date;
             r.Ophaaldatum = reserveringDatum.SelectedDate.Value;
             _reserveringLijst.Add(r);
+            ViewLoader();
+        }
+
+        private void datepicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ViewLoader();
         }
     }
 }

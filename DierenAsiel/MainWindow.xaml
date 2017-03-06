@@ -9,7 +9,7 @@
         Title="Het Dierenasiel" Height="754.029" Width="1340.573" WindowStyle="ToolWindow"
         Background="LightBlue">
     <Grid HorizontalAlignment="Left" Height="700" Margin="10,10,0,0" VerticalAlignment="Top" Width="1301">
-        <DatePicker x:Name="datepicker" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Height="32" Width="1012" />
+        <DatePicker x:Name="datepicker" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Height="32" Width="1012" SelectedDateChanged="datepicker_SelectedDateChanged" />
         <Label x:Name="label" Content="Dieren die gereserveerd zijn voor vandaag:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,47,0,0" VerticalAlignment="Top" Height="43" Width="464" />
         <Button x:Name="PersoonToevoegenBtn" Content="Persoon registreren" HorizontalAlignment="Left" Margin="1092,18,0,0" VerticalAlignment="Top" Width="191" Height="48" Click="PersoonToevoegenBtn_Click" />
         <Button x:Name="DierToevoegenBtn" Content="Dier registreren" HorizontalAlignment="Left" Margin="1092,72,0,0" VerticalAlignment="Top" Width="191" Height="52" Click="DierToevoegenBtn_Click" />
