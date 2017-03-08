@@ -22,24 +22,39 @@ namespace DierenAsiel
     {
         private List<Dier> _dierenLijst;
         private MainWindow _mw;
+        private Formtype _formtype;
 
-        public DierToevoegen(List<Dier> dierenLijst, MainWindow mw)
+        public enum Formtype
+        {
+            Edit,
+            Create
+        };
+
+        public DierToevoegen(List<Dier> dierenLijst, MainWindow mw, Formtype cmd)
         {
             InitializeComponent();
             _dierenLijst = dierenLijst;
             _mw = mw;
+            _formtype = cmd;
             ViewLoader();
         }
 
         private void opslaanBtn_Click(object sender, RoutedEventArgs e)
         {
-            Dier d = new Dier();
-            d.Naam = naamTb.Text;
-            //  d.GeboorteDatum = (DateTime)geboorteDatum.GetValue();
-            d.DierType = Dier.dierType.Hond;
-            //eigenaar
-            _dierenLijst.Add(d);
-            System.Windows.MessageBox.Show(_dierenLijst.Count + "");
+            if (_formtype == Formtype.Create)
+            {
+                Dier d = new Dier();
+                d.Naam = naamTb.Text;
+                //  d.GeboorteDatum = (DateTime)geboorteDatum.GetValue();
+                d.DierType = Dier.dierType.Hond;
+                //eigenaar
+                _dierenLijst.Add(d);
+                System.Windows.MessageBox.Show("Dier toegevoegd");
+            }
+            else if (_formtype == Formtype.Edit)
+            {
+            }
+
             _mw.ViewLoader();
         }
 

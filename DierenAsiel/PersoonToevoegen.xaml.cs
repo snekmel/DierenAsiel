@@ -22,29 +22,62 @@ namespace DierenAsiel
     {
         private List<Persoon> _personenLijst;
         private MainWindow _mw;
+        private Persoon _selectedPerson;
 
-        public PersoonToevoegen(List<Persoon> PersonenLijst, MainWindow mw)
+        public PersoonToevoegen(List<Persoon> personenLijst, MainWindow mw)
         {
             InitializeComponent();
-            _personenLijst = PersonenLijst;
+            _personenLijst = personenLijst;
             _mw = mw;
+
+            ViewLoader();
+        }
+
+        public PersoonToevoegen(List<Persoon> personenLijst, MainWindow mw, Persoon selectedPersoon)
+        {
+            InitializeComponent();
+            _personenLijst = personenLijst;
+            _mw = mw;
+            _selectedPerson = selectedPersoon;
+
+            ViewLoader();
         }
 
         private void PersoonTvgnBtn_Click(object sender, RoutedEventArgs e)
         {
-            Persoon p = new Persoon();
-            p.Naam = naamTb.Text;
-            p.Achternaam = achternaamTb.Text;
-            p.Woonplaats = woonplaatsTb.Text;
-            p.Straat = straatTb.Text;
-            p.Huisnummer = int.Parse(huisnmrTb.Text);
-            p.Postcode = postcodeTb.Text;
-            p.Telefoonnummer = int.Parse(telefoonnmrTb.Text);
-            p.Email = emailTb.Text;
+            if (_selectedPerson == null)
+            {
+                Persoon p = new Persoon();
+                p.Naam = naamTb.Text;
+                p.Achternaam = achternaamTb.Text;
+                p.Woonplaats = woonplaatsTb.Text;
+                p.Straat = straatTb.Text;
+                p.Huisnummer = int.Parse(huisnmrTb.Text);
+                p.Postcode = postcodeTb.Text;
+                p.Telefoonnummer = int.Parse(telefoonnmrTb.Text);
+                p.Email = emailTb.Text;
 
-            _personenLijst.Add(p);
-            System.Windows.MessageBox.Show("Gebruiker" + p.Naam + "toegevoegd");
+                _personenLijst.Add(p);
+
+                System.Windows.MessageBox.Show("Gebruiker" + p.Naam + "toegevoegd");
+            }
+
             _mw.ViewLoader();
+        }
+
+        private void ViewLoader()
+        {
+            //Wanneer er een persoon object is meegegeven.
+            if (_selectedPerson != null)
+            {
+                naamTb.Text = _selectedPerson.Naam;
+                achternaamTb.Text = _selectedPerson.Achternaam;
+                straatTb.Text = _selectedPerson.Straat;
+                huisnmrTb.Text = _selectedPerson.Huisnummer.ToString();
+                postcodeTb.Text = _selectedPerson.Postcode;
+                telefoonnmrTb.Text = _selectedPerson.Telefoonnummer.ToString();
+                emailTb.Text = _selectedPerson.Email;
+            }
         }
     }
 }

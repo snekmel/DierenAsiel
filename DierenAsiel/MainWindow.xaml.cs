@@ -48,7 +48,7 @@ namespace DierenAsiel
 
         private void DierToevoegenBtn_Click(object sender, RoutedEventArgs e)
         {
-            DierToevoegen s = new DierToevoegen(_dierenLijst, this);
+            DierToevoegen s = new DierToevoegen(_dierenLijst, this, DierToevoegen.Formtype.Create);
             s.Show();
         }
 
@@ -118,6 +118,12 @@ namespace DierenAsiel
         private void datepicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             ViewLoader();
+        }
+
+        private void beheerschermBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Dashboard db = new Dashboard(this._dierenLijst, this._personenLijst, this._reserveringLijst, this);
+            db.Show();
         }
     }
 }

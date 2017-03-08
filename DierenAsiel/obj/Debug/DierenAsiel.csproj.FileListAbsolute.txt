@@ -16,3 +16,5 @@ C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\PersoonToevoegen
 C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\PersoonToevoegen.baml
 C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierToevoegen.g.cs
 C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierToevoegen.baml
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\Dashboard.g.cs
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\Dashboard.baml

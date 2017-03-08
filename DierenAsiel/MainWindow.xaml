@@ -46,5 +46,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="beheerschermBtn" Content="Beheerscherm" HorizontalAlignment="Left" Margin="1092,129,0,0" VerticalAlignment="Top" Width="191" Height="74" Click="beheerschermBtn_Click" />
     </Grid>
 </Window>
