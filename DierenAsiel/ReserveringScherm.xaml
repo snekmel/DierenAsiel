@@ -15,20 +15,34 @@
             <FlowDocument />
         </RichTextBox>
         <DatePicker x:Name="ophaaldatumDatepicker" HorizontalAlignment="Left" Margin="112,27,0,0" VerticalAlignment="Top" Height="25" Width="427" />
-        <ComboBox x:Name="opgehaaldCombobox" HorizontalAlignment="Left" Margin="112,59,0,0" VerticalAlignment="Top" Width="120" />
-        <Label x:Name="label3" Content="Naam" HorizontalAlignment="Left" Margin="30,220,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label4" Content="Achternaam" HorizontalAlignment="Left" Margin="30,246,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label5" Content="Straat" HorizontalAlignment="Left" Margin="30,272,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label6" Content="Postcode" HorizontalAlignment="Left" Margin="30,298,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label7" Content="Woonplaats" HorizontalAlignment="Left" Margin="30,324,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label8" Content="Telefoonnummer" HorizontalAlignment="Left" Margin="30,350,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label9" Content="Email" HorizontalAlignment="Left" Margin="30,376,0,0" VerticalAlignment="Top" />
-        <Label x:Name="naamLabel" Content="Label" HorizontalAlignment="Left" Margin="166,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.855,-0.404" />
-        <Label x:Name="achternaamLabel" Content="Label" HorizontalAlignment="Left" Margin="166,246,0,0" VerticalAlignment="Top" />
-        <Label x:Name="straatLabel" Content="Label" HorizontalAlignment="Left" Margin="166,272,0,0" VerticalAlignment="Top" />
-        <Label x:Name="postcodeLabel" Content="Label" HorizontalAlignment="Left" Margin="166,298,0,0" VerticalAlignment="Top" />
-        <Label x:Name="woonplaatsLabel" Content="Label" HorizontalAlignment="Left" Margin="166,324,0,0" VerticalAlignment="Top" />
-        <Label x:Name="telefoonNummerLabel" Content="Label" HorizontalAlignment="Left" Margin="166,350,0,0" VerticalAlignment="Top" />
-        <Label x:Name="emailLabel" Content="Label" HorizontalAlignment="Left" Margin="166,376,0,0" VerticalAlignment="Top" />
+        <ComboBox x:Name="opgehaaldCombobox" HorizontalAlignment="Left" Margin="112,59,0,0" VerticalAlignment="Top" Width="120">
+            <Button />
+            <Button />
+        </ComboBox>
+        <Label x:Name="label3" Content="Naam" HorizontalAlignment="Left" Margin="129,226,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label4" Content="Achternaam" HorizontalAlignment="Left" Margin="129,252,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label5" Content="Straat" HorizontalAlignment="Left" Margin="129,278,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label6" Content="Postcode" HorizontalAlignment="Left" Margin="129,304,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label7" Content="Woonplaats" HorizontalAlignment="Left" Margin="129,330,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label8" Content="Telefoonnummer" HorizontalAlignment="Left" Margin="129,356,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label9" Content="Email" HorizontalAlignment="Left" Margin="129,382,0,0" VerticalAlignment="Top" />
+        <Label x:Name="naamLabel" Content="Label" HorizontalAlignment="Left" Margin="265,226,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.855,-0.404" />
+        <Label x:Name="achternaamLabel" Content="Label" HorizontalAlignment="Left" Margin="265,252,0,0" VerticalAlignment="Top" />
+        <Label x:Name="straatLabel" Content="Label" HorizontalAlignment="Left" Margin="265,278,0,0" VerticalAlignment="Top" />
+        <Label x:Name="postcodeLabel" Content="Label" HorizontalAlignment="Left" Margin="265,304,0,0" VerticalAlignment="Top" />
+        <Label x:Name="woonplaatsLabel" Content="Label" HorizontalAlignment="Left" Margin="265,330,0,0" VerticalAlignment="Top" />
+        <Label x:Name="telefoonNummerLabel" Content="Label" HorizontalAlignment="Left" Margin="265,356,0,0" VerticalAlignment="Top" />
+        <Label x:Name="emailLabel" Content="Label" HorizontalAlignment="Left" Margin="265,382,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label10" Content="Naam" HorizontalAlignment="Left" Margin="387,226,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label11" Content="DierSoort" HorizontalAlignment="Left" Margin="387,252,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label12" Content="Geboortedatum" HorizontalAlignment="Left" Margin="387,278,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label13" Content="Geslacht" HorizontalAlignment="Left" Margin="387,304,0,0" VerticalAlignment="Top" />
+        <Label x:Name="dierNaamLabel" Content="Label" HorizontalAlignment="Left" Margin="513,226,0,0" VerticalAlignment="Top" />
+        <Label x:Name="dierSoortLabel" Content="Label" HorizontalAlignment="Left" Margin="513,252,0,0" VerticalAlignment="Top" />
+        <Label x:Name="dierGebDatumLabel" Content="Label" HorizontalAlignment="Left" Margin="513,278,0,0" VerticalAlignment="Top" />
+        <Label x:Name="dierGeslachtLabel" Content="Label" HorizontalAlignment="Left" Margin="513,304,0,0" VerticalAlignment="Top" />
+        <GroupBox x:Name="Persoonsgegevens" Header="Persoons gegevens" HorizontalAlignment="Left" Margin="109,200,0,0" VerticalAlignment="Top" Height="238" Width="236" />
+        <GroupBox x:Name="groupBox" Header="Dier gegevens" HorizontalAlignment="Left" Margin="358,200,0,0" VerticalAlignment="Top" Height="238" Width="219" />
+        <Button x:Name="button" Content="Opslaan" HorizontalAlignment="Left" Margin="112,460,0,0" VerticalAlignment="Top" Width="582" Height="34" />
     </Grid>
 </Window>
