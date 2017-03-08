@@ -89,7 +89,7 @@ namespace DierenAsiel
             p.Woonplaats = "Eindhoven";
             p.Straat = "Straat";
             p.Huisnummer = 10;
-            p.Telefoonnummer = 0634810013;
+            p.Telefoonnummer = "0634810013";
             _personenLijst.Add(p);
 
             Dier d = new Dier();
@@ -110,6 +110,8 @@ namespace DierenAsiel
             r.Dier = d;
             r.Persoon = p;
             r.Reserveerdatum = DateTime.Now.Date;
+            TextRange allTextRange = new TextRange(notitieTextbox.Document.ContentStart, notitieTextbox.Document.ContentEnd);
+            r.Note = allTextRange.Text;
             r.Ophaaldatum = reserveringDatum.SelectedDate.Value;
             _reserveringLijst.Add(r);
             ViewLoader();

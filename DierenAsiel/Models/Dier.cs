@@ -14,6 +14,11 @@ namespace DierenAsiel.Models
             Hond, Kat
         }
 
+        public enum Geslacht
+        {
+            Man, Vrouw
+        }
+
         //Privates
         private string _naam;
 
@@ -22,8 +27,16 @@ namespace DierenAsiel.Models
         private string _extraInfo;
         private dierType _diertype;
         private Persoon _vorigeEigenaar;
+        private Geslacht _geslacht;
 
         //Getters / setters
+
+        public Geslacht DierGeslacht
+        {
+            get { return _geslacht; }
+            set { _geslacht = value; }
+        }
+
         public Persoon VorigeEigenaar
         {
             get { return _vorigeEigenaar; }

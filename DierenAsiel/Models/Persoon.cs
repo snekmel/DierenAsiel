@@ -8,14 +8,21 @@ namespace DierenAsiel.Models
 {
     public class Persoon
     {
+        public enum Geslacht
+        {
+            Man, Vrouw
+        }
+
         private string _naam;
         private string _achternaam;
         private string _woonplaats;
         private string _straat;
         private int _huisnmr;
         private string _postcode;
-        private int _telefoonNummer;
+        private string _telefoonNummer;
         private string _email;
+
+        public Geslacht PersoonGeslacht { get; set; }
 
         public string Email
         {
@@ -23,7 +30,7 @@ namespace DierenAsiel.Models
             set { _email = value; }
         }
 
-        public int Telefoonnummer
+        public string Telefoonnummer
         {
             get { return _telefoonNummer; }
             set { _telefoonNummer = value; }

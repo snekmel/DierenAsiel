@@ -54,12 +54,12 @@ namespace DierenAsiel
                 p.Straat = straatTb.Text;
                 p.Huisnummer = int.Parse(huisnmrTb.Text);
                 p.Postcode = postcodeTb.Text;
-                p.Telefoonnummer = int.Parse(telefoonnmrTb.Text);
+                p.Telefoonnummer = telefoonnmrTb.Text;
                 p.Email = emailTb.Text;
 
                 _personenLijst.Add(p);
 
-                System.Windows.MessageBox.Show("Gebruiker" + p.Naam + "toegevoegd");
+                System.Windows.MessageBox.Show("Gebruiker " + p.Naam + " toegevoegd");
             }
 
             _mw.ViewLoader();
@@ -75,7 +75,7 @@ namespace DierenAsiel
                 straatTb.Text = _selectedPerson.Straat;
                 huisnmrTb.Text = _selectedPerson.Huisnummer.ToString();
                 postcodeTb.Text = _selectedPerson.Postcode;
-                telefoonnmrTb.Text = _selectedPerson.Telefoonnummer.ToString();
+                telefoonnmrTb.Text = _selectedPerson.Telefoonnummer;
                 emailTb.Text = _selectedPerson.Email;
             }
         }

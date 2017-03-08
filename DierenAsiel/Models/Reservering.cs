@@ -13,5 +13,6 @@ namespace DierenAsiel.Models
         public bool IsOpgehaald { get; set; }
         public Persoon Persoon { get; set; }
         public Dier Dier { get; set; }
+        public string Note { get; set; }
     }
 }

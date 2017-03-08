@@ -18,3 +18,5 @@ C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierToevoegen.g.
 C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\DierToevoegen.baml
 C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\Dashboard.g.cs
 C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\Dashboard.baml
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\ReserveringScherm.g.cs
+C:\Users\Lars Lemkens\Desktop\DierenAsiel\DierenAsiel\obj\Debug\ReserveringScherm.baml

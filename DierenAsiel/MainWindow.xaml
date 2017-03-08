@@ -9,15 +9,15 @@
         Title="Het Dierenasiel" Height="754.029" Width="1340.573" WindowStyle="ToolWindow"
         Background="LightBlue">
     <Grid HorizontalAlignment="Left" Height="700" Margin="10,10,0,0" VerticalAlignment="Top" Width="1301">
-        <DatePicker x:Name="datepicker" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Height="32" Width="1012" SelectedDateChanged="datepicker_SelectedDateChanged" />
-        <Label x:Name="label" Content="Dieren die gereserveerd zijn voor vandaag:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,47,0,0" VerticalAlignment="Top" Height="43" Width="464" />
-        <Button x:Name="PersoonToevoegenBtn" Content="Persoon registreren" HorizontalAlignment="Left" Margin="1092,18,0,0" VerticalAlignment="Top" Width="191" Height="48" Click="PersoonToevoegenBtn_Click" />
-        <Button x:Name="DierToevoegenBtn" Content="Dier registreren" HorizontalAlignment="Left" Margin="1092,72,0,0" VerticalAlignment="Top" Width="191" Height="52" Click="DierToevoegenBtn_Click" />
-        <Label x:Name="label2" Content="Datum" HorizontalAlignment="Left" Margin="34,367,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label3" Content="Dier" HorizontalAlignment="Left" Margin="34,398,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.421,-0.692" />
-        <Label x:Name="label4" Content="Persoon" HorizontalAlignment="Left" Margin="586,393,0,0" VerticalAlignment="Top" />
-        <Button x:Name="button" Content="Reserveer" HorizontalAlignment="Left" Margin="34,612,0,0" VerticalAlignment="Top" Width="1066" Height="50" Click="reserveerBtnClick" />
-        <ListView x:Name="personenListview" HorizontalAlignment="Left" Height="148" Margin="586,419,0,0" VerticalAlignment="Top" Width="514">
+        <DatePicker x:Name="datepicker" HorizontalAlignment="Left" Margin="34,28,0,0" VerticalAlignment="Top" Height="32" Width="1012" SelectedDateChanged="datepicker_SelectedDateChanged" />
+        <Label x:Name="label" Content="Dieren die gereserveerd zijn voor vandaag:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,65,0,0" VerticalAlignment="Top" Height="43" Width="464" />
+        <Button x:Name="PersoonToevoegenBtn" Content="Persoon registreren" HorizontalAlignment="Left" Margin="1124,18,0,0" VerticalAlignment="Top" Width="159" Height="48" Click="PersoonToevoegenBtn_Click" />
+        <Button x:Name="DierToevoegenBtn" Content="Dier registreren" HorizontalAlignment="Left" Margin="1124,72,0,0" VerticalAlignment="Top" Width="159" Height="52" Click="DierToevoegenBtn_Click" />
+        <Label x:Name="label2" Content="Datum" HorizontalAlignment="Left" Margin="32,289,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label3" Content="Dier" HorizontalAlignment="Left" Margin="34,424,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.421,-0.692" />
+        <Label x:Name="label4" Content="Persoon" HorizontalAlignment="Left" Margin="576,424,0,0" VerticalAlignment="Top" />
+        <Button x:Name="button" Content="Reserveer" HorizontalAlignment="Left" Margin="34,612,0,0" VerticalAlignment="Top" Width="1056" Height="50" Click="reserveerBtnClick" />
+        <ListView x:Name="personenListview" HorizontalAlignment="Left" Height="148" Margin="576,450,0,0" VerticalAlignment="Top" Width="514">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Naam" DisplayMemberBinding="{Binding Naam}" Width="50" />
@@ -27,7 +27,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="dierenListview" HorizontalAlignment="Left" Height="143" Margin="34,424,0,0" VerticalAlignment="Top" Width="494">
+        <ListView x:Name="dierenListview" HorizontalAlignment="Left" Height="143" Margin="34,450,0,0" VerticalAlignment="Top" Width="494">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Naam" DisplayMemberBinding="{Binding Naam}" Width="100" />
@@ -37,8 +37,8 @@
             </ListView.View>
         </ListView>
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="-186,393,0,0" VerticalAlignment="Top" />
-        <DatePicker x:Name="reserveringDatum" HorizontalAlignment="Left" Margin="85,368,0,0" VerticalAlignment="Top" Height="26" Width="320" />
-        <ListView x:Name="ReserveringListview" HorizontalAlignment="Left" Height="194" Margin="34,90,0,0" VerticalAlignment="Top" Width="1012">
+        <DatePicker x:Name="reserveringDatum" HorizontalAlignment="Left" Margin="84,290,0,0" VerticalAlignment="Top" Height="26" Width="320" />
+        <ListView x:Name="ReserveringListview" HorizontalAlignment="Left" Height="113" Margin="34,108,0,0" VerticalAlignment="Top" Width="1012">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Dier" DisplayMemberBinding="{Binding Dier.Naam}" />
@@ -46,6 +46,12 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="beheerschermBtn" Content="Beheerscherm" HorizontalAlignment="Left" Margin="1092,129,0,0" VerticalAlignment="Top" Width="191" Height="74" Click="beheerschermBtn_Click" />
+        <Button x:Name="beheerschermBtn" Content="Beheerscherm" HorizontalAlignment="Left" Margin="1124,129,0,0" VerticalAlignment="Top" Width="159" Height="74" Click="beheerschermBtn_Click" />
+        <Label x:Name="label1" Content="Notitie" HorizontalAlignment="Left" Margin="32,332,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.359,0.5" />
+        <RichTextBox x:Name="notitieTextbox" HorizontalAlignment="Left" Height="74" Margin="84,332,0,0" VerticalAlignment="Top" Width="1006">
+            <FlowDocument />
+        </RichTextBox>
+        <GroupBox x:Name="groupBox" Header="Een nieuwe reservering aanmaken" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top" Height="420" Width="1102" />
+        <GroupBox x:Name="groupBox1" Header="Reserveringen" HorizontalAlignment="Left" Margin="7,4,0,0" VerticalAlignment="Top" Height="247" Width="1105" />
     </Grid>
 </Window>
