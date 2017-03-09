@@ -21,7 +21,6 @@ namespace DierenAsiel.Models
         private Geslacht _geslacht;
 
         //Getters / setters
-
         public Geslacht DierGeslacht
         {
             get { return _geslacht; }
@@ -45,7 +44,5 @@ namespace DierenAsiel.Models
             get { return _naam; }
             set { _naam = value; }
         }
-
-        //Functions
     }
 }

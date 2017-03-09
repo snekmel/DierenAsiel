@@ -8,8 +8,6 @@ namespace DierenAsiel.Models
 {
     public class Cat : Dier
     {
-        private string _extraInfo;
-
         public string ExtraInfo { get; set; }
     }
 }
