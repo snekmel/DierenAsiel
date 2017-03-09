@@ -36,6 +36,7 @@ namespace DierenAsiel
         {
             //Vul de reserveringdata
             ophaaldatumDatepicker.DisplayDate = _selectedReservering.Ophaaldatum;
+            notitiesTb.Document.Blocks.Add(new Paragraph(new Run(_selectedReservering.Note)));
 
             //Vul de persoongroupbox
             naamLabel.Content = _selectedReservering.Persoon.Naam;

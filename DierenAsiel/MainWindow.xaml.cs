@@ -127,5 +127,16 @@ namespace DierenAsiel
             Dashboard db = new Dashboard(this._dierenLijst, this._personenLijst, this._reserveringLijst, this);
             db.Show();
         }
+
+        private void ReserveringListview_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Reservering r = (Reservering)ReserveringListview.SelectedItem;
+
+            if (r != null)
+            {
+                ReserveringScherm s = new ReserveringScherm(this, r);
+                s.Show();
+            }
+        }
     }
 }

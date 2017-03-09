@@ -38,7 +38,7 @@
         </ListView>
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="-186,393,0,0" VerticalAlignment="Top" />
         <DatePicker x:Name="reserveringDatum" HorizontalAlignment="Left" Margin="84,290,0,0" VerticalAlignment="Top" Height="26" Width="320" />
-        <ListView x:Name="ReserveringListview" HorizontalAlignment="Left" Height="113" Margin="34,108,0,0" VerticalAlignment="Top" Width="1012">
+        <ListView x:Name="ReserveringListview" HorizontalAlignment="Left" Height="113" Margin="34,108,0,0" VerticalAlignment="Top" Width="1012" MouseDoubleClick="ReserveringListview_OnMouseDoubleClick">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Dier" DisplayMemberBinding="{Binding Dier.Naam}" />

@@ -34,10 +34,7 @@ namespace DierenAsiel
             _reserveringLijst = reserveringLijst;
             _mw = mw;
 
-            foreach (Persoon p in _personenLijst)
-            {
-                personenListview.Items.Add(p);
-            }
+            ViewLoader();
         }
 
         private void naamfilterTb_TextChanged(object sender, TextChangedEventArgs e)
@@ -66,8 +63,18 @@ namespace DierenAsiel
         private void PersonenlistviewClick(object sender, MouseButtonEventArgs e)
         {
             Persoon p = (Persoon)personenListview.SelectedItem;
-            PersoonToevoegen pscherm = new PersoonToevoegen(_personenLijst, _mw, p);
+            PersoonToevoegen pscherm = new PersoonToevoegen(_personenLijst, _mw, p, this);
             pscherm.Show();
+        }
+
+        public void ViewLoader()
+        {
+            personenListview.Items.Clear();
+
+            foreach (Persoon p in _personenLijst)
+            {
+                personenListview.Items.Add(p);
+            }
         }
     }
 }

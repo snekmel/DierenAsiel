@@ -20,8 +20,10 @@ namespace DierenAsiel
     /// </summary>
     public partial class PersoonToevoegen : Window
     {
-        private List<Persoon> _personenLijst;
         private MainWindow _mw;
+        private Dashboard _dashboard;
+        private List<Persoon> _personenLijst;
+
         private Persoon _selectedPerson;
 
         public PersoonToevoegen(List<Persoon> personenLijst, MainWindow mw)
@@ -33,18 +35,20 @@ namespace DierenAsiel
             ViewLoader();
         }
 
-        public PersoonToevoegen(List<Persoon> personenLijst, MainWindow mw, Persoon selectedPersoon)
+        public PersoonToevoegen(List<Persoon> personenLijst, MainWindow mw, Persoon selectedPersoon, Dashboard db)
         {
             InitializeComponent();
             _personenLijst = personenLijst;
             _mw = mw;
             _selectedPerson = selectedPersoon;
+            _dashboard = db;
 
             ViewLoader();
         }
 
         private void PersoonTvgnBtn_Click(object sender, RoutedEventArgs e)
         {
+            //Save nieuw persoon
             if (_selectedPerson == null)
             {
                 Persoon p = new Persoon();
@@ -56,13 +60,23 @@ namespace DierenAsiel
                 p.Postcode = postcodeTb.Text;
                 p.Telefoonnummer = telefoonnmrTb.Text;
                 p.Email = emailTb.Text;
-
                 _personenLijst.Add(p);
-
-                System.Windows.MessageBox.Show("Gebruiker " + p.Naam + " toegevoegd");
+                _mw.ViewLoader();
             }
 
-            _mw.ViewLoader();
+            //Edit persoon
+            else if (_selectedPerson != null)
+            {
+                _selectedPerson.Naam = naamTb.Text;
+                _selectedPerson.Achternaam = achternaamTb.Text;
+                _selectedPerson.Straat = straatTb.Text;
+                _selectedPerson.Huisnummer = int.Parse(huisnmrTb.Text);
+                _selectedPerson.Postcode = postcodeTb.Text;
+                _selectedPerson.Telefoonnummer = telefoonnmrTb.Text;
+                _selectedPerson.Email = emailTb.Text;
+                _selectedPerson.Woonplaats = woonplaatsTb.Text;
+                _dashboard.ViewLoader();
+            }
         }
 
         private void ViewLoader()
@@ -70,6 +84,8 @@ namespace DierenAsiel
             //Wanneer er een persoon object is meegegeven.
             if (_selectedPerson != null)
             {
+                PersoonTvgnBtn.Content = "Opslaan";
+
                 naamTb.Text = _selectedPerson.Naam;
                 achternaamTb.Text = _selectedPerson.Achternaam;
                 straatTb.Text = _selectedPerson.Straat;
@@ -77,6 +93,7 @@ namespace DierenAsiel
                 postcodeTb.Text = _selectedPerson.Postcode;
                 telefoonnmrTb.Text = _selectedPerson.Telefoonnummer;
                 emailTb.Text = _selectedPerson.Email;
+                woonplaatsTb.Text = _selectedPerson.Woonplaats;
             }
         }
     }
