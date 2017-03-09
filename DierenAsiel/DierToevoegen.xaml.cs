@@ -43,10 +43,10 @@ namespace DierenAsiel
         {
             if (_formtype == Formtype.Create)
             {
-                Dier d = new Dier();
+                var d = new Dog();
                 d.Naam = naamTb.Text;
                 //  d.GeboorteDatum = (DateTime)geboorteDatum.GetValue();
-                d.DierType = Dier.dierType.Hond;
+
                 //eigenaar
                 _dierenLijst.Add(d);
                 System.Windows.MessageBox.Show("Dier toegevoegd");
@@ -60,10 +60,8 @@ namespace DierenAsiel
 
         public void ViewLoader()
         {
-            foreach (Dier.dierType t in Enum.GetValues(typeof(Dier.dierType)))
-            {
-                dierSoortCb.Items.Add(t);
-            }
+            dierSoortCb.Items.Add("Hond");
+            dierSoortCb.Items.Add("Kat");
 
             foreach (Persoon p in _mw.Personenlijst)
             {

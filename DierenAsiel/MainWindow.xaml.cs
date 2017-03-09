@@ -92,11 +92,15 @@ namespace DierenAsiel
             p.Telefoonnummer = "0634810013";
             _personenLijst.Add(p);
 
-            Dier d = new Dier();
+            var d = new Dog();
             d.Naam = "DierNaam";
             d.GeboorteDatum = DateTime.Now.Date;
-            d.DierType = Dier.dierType.Hond;
             _dierenLijst.Add(d);
+
+            var k = new Cat();
+            k.Naam = "test";
+            k.GeboorteDatum = DateTime.Now.Date;
+            _dierenLijst.Add(k);
         }
 
         private void reserveerBtnClick(object sender, RoutedEventArgs e)

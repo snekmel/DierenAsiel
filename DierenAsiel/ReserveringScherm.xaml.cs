@@ -49,7 +49,8 @@ namespace DierenAsiel
 
             //Vul de dierengroupbox
             dierNaamLabel.Content = _selectedReservering.Dier.Naam;
-            dierSoortLabel.Content = _selectedReservering.Dier.DierType.ToString();
+            dierSoortLabel.Content = _selectedReservering.Dier.GetType().Name;
+
             dierGebDatumLabel.Content = _selectedReservering.Dier.GeboorteDatum.ToString();
             dierGeslachtLabel.Content = _selectedReservering.Dier.DierGeslacht.ToString();
         }

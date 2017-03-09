@@ -8,12 +8,6 @@ namespace DierenAsiel.Models
 {
     public class Dier
     {
-        //Enum
-        public enum dierType
-        {
-            Hond, Kat
-        }
-
         public enum Geslacht
         {
             Man, Vrouw
@@ -23,9 +17,6 @@ namespace DierenAsiel.Models
         private string _naam;
 
         private DateTime _gebDatum;
-        private DateTime _uitlaatDatum;
-        private string _extraInfo;
-        private dierType _diertype;
         private Persoon _vorigeEigenaar;
         private Geslacht _geslacht;
 
@@ -41,24 +32,6 @@ namespace DierenAsiel.Models
         {
             get { return _vorigeEigenaar; }
             set { _vorigeEigenaar = value; }
-        }
-
-        public dierType DierType
-        {
-            get { return _diertype; }
-            set { _diertype = value; }
-        }
-
-        public string ExtraInfo
-        {
-            get { return _extraInfo; }
-            set { _extraInfo = value; }
-        }
-
-        public DateTime UitlaatDatum
-        {
-            get { return _uitlaatDatum; }
-            set { _uitlaatDatum = value; }
         }
 
         public DateTime GeboorteDatum
