@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DierenAsiel"
         mc:Ignorable="d"
-        Title="Dashboard" Height="758.973" Width="1456.816">
+        Title="Dashboard" Height="668.857" Width="807.984" WindowStartupLocation="CenterScreen" Background="LightBlue">
     <Grid>
-        <ListView x:Name="personenListview" HorizontalAlignment="Left" Height="255" Margin="10,54,0,0" VerticalAlignment="Top" Width="756" MouseDoubleClick="PersonenlistviewClick">
+        <ListView x:Name="personenListview" HorizontalAlignment="Left" Height="249" Margin="10,54,0,0" VerticalAlignment="Top" Width="768" MouseDoubleClick="PersonenlistviewClick">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Naam" DisplayMemberBinding="{Binding Naam}" Width="50" />
@@ -26,8 +26,8 @@
             <Label x:Name="label1" Content="Filter op naam:" />
         </Label>
         <Label x:Name="label2" Content="Filter op naam:" HorizontalAlignment="Left" Margin="16,398,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="115,402,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="179" Margin="16,429,0,0" VerticalAlignment="Top" Width="750">
+        <TextBox x:Name="dierfilterTb" HorizontalAlignment="Left" Height="23" Margin="115,402,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="DierfilterTb_OnTextChanged" />
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="179" Margin="16,429,0,0" VerticalAlignment="Top" Width="762">
             <ListView.View>
                 <GridView>
                     <GridViewColumn />

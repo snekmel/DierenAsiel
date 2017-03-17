@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DierenAsiel"
         mc:Ignorable="d"
         Title="ReserveringScherm" Height="546.966" Width="812.929"
-        Background="LightBlue">
+        Background="LightBlue" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label x:Name="label" Content="Ophaaldatum" HorizontalAlignment="Left" Margin="30,27,0,0" VerticalAlignment="Top" />
         <Label x:Name="label1" Content="Opgehaald" HorizontalAlignment="Left" Margin="30,59,0,0" VerticalAlignment="Top" />
@@ -16,8 +16,8 @@
         </RichTextBox>
         <DatePicker x:Name="ophaaldatumDatepicker" HorizontalAlignment="Left" Margin="112,27,0,0" VerticalAlignment="Top" Height="25" Width="427" />
         <ComboBox x:Name="opgehaaldCombobox" HorizontalAlignment="Left" Margin="112,59,0,0" VerticalAlignment="Top" Width="120">
-            <Button />
-            <Button />
+            <ComboBoxItem x:Name="cbJa">Ja</ComboBoxItem>
+            <ComboBoxItem x:Name="cbNee">Nee</ComboBoxItem>
         </ComboBox>
         <Label x:Name="label3" Content="Naam" HorizontalAlignment="Left" Margin="129,226,0,0" VerticalAlignment="Top" />
         <Label x:Name="label4" Content="Achternaam" HorizontalAlignment="Left" Margin="129,252,0,0" VerticalAlignment="Top" />
@@ -43,6 +43,6 @@
         <Label x:Name="dierGeslachtLabel" Content="Label" HorizontalAlignment="Left" Margin="533,330,0,0" VerticalAlignment="Top" />
         <GroupBox x:Name="Persoonsgegevens" Header="Persoons gegevens" HorizontalAlignment="Left" Margin="109,200,0,0" VerticalAlignment="Top" Height="238" Width="250" />
         <GroupBox x:Name="groupBox" Header="Dier gegevens" HorizontalAlignment="Left" Margin="381,200,0,0" VerticalAlignment="Top" Height="238" Width="313" />
-        <Button x:Name="button" Content="Opslaan" HorizontalAlignment="Left" Margin="112,460,0,0" VerticalAlignment="Top" Width="582" Height="34" />
+        <Button x:Name="reserveringOpslaanButton" Content="Opslaan" HorizontalAlignment="Left" Margin="112,460,0,0" VerticalAlignment="Top" Width="582" Height="34" Click="reserveringOpslaanButton_Click" />
     </Grid>
 </Window>

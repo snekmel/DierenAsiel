@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DierenAsiel"
         mc:Ignorable="d"
-        Title="PersoonToevoegen" Height="289.71" Width="458.311">
+        Title="PersoonToevoegen" Height="289.71" Width="458.311" WindowStartupLocation="CenterScreen" Background="LightBlue">
     <Grid>
         <Label x:Name="label" Content="Naam&#xD;&#xA;" HorizontalAlignment="Left" Margin="14,6,0,0" VerticalAlignment="Top" />
         <Label x:Name="label2" Content="Achternaam" HorizontalAlignment="Left" Margin="14,33,0,0" VerticalAlignment="Top" />

@@ -35,8 +35,17 @@ namespace DierenAsiel
         private void ViewLoader()
         {
             //Vul de reserveringdata
-            ophaaldatumDatepicker.DisplayDate = _selectedReservering.Ophaaldatum;
+            ophaaldatumDatepicker.SelectedDate = _selectedReservering.Ophaaldatum.Date;
             notitiesTb.Document.Blocks.Add(new Paragraph(new Run(_selectedReservering.Note)));
+
+            if (_selectedReservering.IsOpgehaald)
+            {
+                cbJa.IsSelected = true;
+            }
+            else
+            {
+                cbNee.IsSelected = true;
+            }
 
             //Vul de persoongroupbox
             naamLabel.Content = _selectedReservering.Persoon.Naam;
@@ -50,9 +59,27 @@ namespace DierenAsiel
             //Vul de dierengroupbox
             dierNaamLabel.Content = _selectedReservering.Dier.Naam;
             dierSoortLabel.Content = _selectedReservering.Dier.GetType().Name;
-
             dierGebDatumLabel.Content = _selectedReservering.Dier.GeboorteDatum.ToString();
             dierGeslachtLabel.Content = _selectedReservering.Dier.DierGeslacht.ToString();
+        }
+
+        private void reserveringOpslaanButton_Click(object sender, RoutedEventArgs e)
+        {
+            _selectedReservering.Ophaaldatum = (DateTime)ophaaldatumDatepicker.SelectedDate;
+            //Combobox
+            if (cbJa.IsSelected)
+            {
+                _selectedReservering.IsOpgehaald = true;
+            }
+            if (cbNee.IsSelected)
+            {
+                _selectedReservering.IsOpgehaald = false;
+            }
+            TextRange allTextRange = new TextRange(notitiesTb.Document.ContentStart, notitiesTb.Document.ContentEnd);
+            _selectedReservering.Note = allTextRange.Text;
+            _mw.ViewLoader();
+
+            System.Windows.MessageBox.Show("Opgeslagen");
         }
     }
 }

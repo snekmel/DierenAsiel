@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DierenAsiel.Models
 {
-    public class Dier
+    public abstract class Dier
     {
         public enum Geslacht
         {

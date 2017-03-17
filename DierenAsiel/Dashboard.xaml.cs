@@ -76,5 +76,9 @@ namespace DierenAsiel
                 personenListview.Items.Add(p);
             }
         }
+
+        private void DierfilterTb_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+        }
     }
 }
