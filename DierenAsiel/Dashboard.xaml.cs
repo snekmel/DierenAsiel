@@ -20,18 +20,14 @@ namespace DierenAsiel
     /// </summary>
     public partial class Dashboard : Window
     {
-        private List<Dier> _dierenLijst;
-        private List<Persoon> _personenLijst;
-        private List<Reservering> _reserveringLijst;
+        private Models.DierenAsiel _dierenAsiel;
         private MainWindow _mw;
 
-        public Dashboard(List<Dier> dierenLijst, List<Persoon> personenLijst, List<Reservering> reserveringLijst, MainWindow mw)
+        public Dashboard(Models.DierenAsiel dierenasiel, MainWindow mw)
         {
             InitializeComponent();
 
-            _dierenLijst = dierenLijst;
-            _personenLijst = personenLijst;
-            _reserveringLijst = reserveringLijst;
+            _dierenAsiel = dierenasiel;
             _mw = mw;
 
             ViewLoader();
@@ -43,7 +39,7 @@ namespace DierenAsiel
 
             if (naamfilterTb.Text != "")
             {
-                foreach (Persoon p in _personenLijst)
+                foreach (Persoon p in _dierenAsiel.Personen)
                 {
                     if (p.Naam.Contains(naamfilterTb.Text) || p.Achternaam.Contains(naamfilterTb.Text))
                     {
@@ -53,7 +49,7 @@ namespace DierenAsiel
             }
             else
             {
-                foreach (Persoon p in _personenLijst)
+                foreach (Persoon p in _dierenAsiel.Personen)
                 {
                     personenListview.Items.Add(p);
                 }
@@ -63,7 +59,7 @@ namespace DierenAsiel
         private void PersonenlistviewClick(object sender, MouseButtonEventArgs e)
         {
             Persoon p = (Persoon)personenListview.SelectedItem;
-            PersoonToevoegen pscherm = new PersoonToevoegen(_personenLijst, _mw, p, this);
+            PersoonToevoegen pscherm = new PersoonToevoegen(_mw, p,this, _dierenAsiel);
             pscherm.Show();
         }
 
@@ -71,7 +67,7 @@ namespace DierenAsiel
         {
             personenListview.Items.Clear();
 
-            foreach (Persoon p in _personenLijst)
+            foreach (Persoon p in _dierenAsiel.Personen)
             {
                 personenListview.Items.Add(p);
             }

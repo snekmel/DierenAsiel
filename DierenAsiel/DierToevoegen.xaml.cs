@@ -20,7 +20,7 @@ namespace DierenAsiel
     /// </summary>
     public partial class DierToevoegen : Window
     {
-        private List<Dier> _dierenLijst;
+        private Models.DierenAsiel _dierenAsiel;
         private MainWindow _mw;
         private Formtype _formtype;
 
@@ -30,10 +30,10 @@ namespace DierenAsiel
             Create
         };
 
-        public DierToevoegen(List<Dier> dierenLijst, MainWindow mw, Formtype cmd)
+        public DierToevoegen(Models.DierenAsiel da, MainWindow mw, Formtype cmd)
         {
             InitializeComponent();
-            _dierenLijst = dierenLijst;
+            _dierenAsiel = da;
             _mw = mw;
             _formtype = cmd;
             ViewLoader();
@@ -48,7 +48,7 @@ namespace DierenAsiel
                 //  d.GeboorteDatum = (DateTime)geboorteDatum.GetValue();
 
                 //eigenaar
-                _dierenLijst.Add(d);
+                _dierenAsiel.Dieren.Add(d);
                 System.Windows.MessageBox.Show("Dier toegevoegd");
             }
             else if (_formtype == Formtype.Edit)
@@ -63,7 +63,7 @@ namespace DierenAsiel
             dierSoortCb.Items.Add("Hond");
             dierSoortCb.Items.Add("Kat");
 
-            foreach (Persoon p in _mw.Personenlijst)
+            foreach (Persoon p in _dierenAsiel.Personen)
             {
                 vorigeEigenaarCb.Items.Add(p.Achternaam);
             }

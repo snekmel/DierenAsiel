@@ -55,6 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\Cat.cs" />
+    <Compile Include="Models\DierenAsiel.cs" />
     <Compile Include="Models\Dog.cs" />
     <Compile Include="ReserveringScherm.xaml.cs">
       <DependentUpon>ReserveringScherm.xaml</DependentUpon>

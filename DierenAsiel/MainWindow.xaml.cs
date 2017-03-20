@@ -18,37 +18,27 @@ namespace DierenAsiel
 {
     public partial class MainWindow : Window
     {
-        private List<Persoon> _personenLijst;
-        private List<Dier> _dierenLijst;
-        private List<Reservering> _reserveringLijst;
 
-        public List<Persoon> Personenlijst
-        {
-            get { return _personenLijst; }
-            set { _personenLijst = value; }
-        }
-
+        public Models.DierenAsiel DierenAsiel { get; private set; }
+    
         public MainWindow()
         {
             InitializeComponent();
-            _personenLijst = new List<Persoon>();
-            _dierenLijst = new List<Dier>();
-            _reserveringLijst = new List<Reservering>();
             datepicker.SelectedDate = DateTime.Today.Date;
-
+            DierenAsiel = new Models.DierenAsiel();
             TestData();
             ViewLoader();
         }
 
         private void PersoonToevoegenBtn_Click(object sender, RoutedEventArgs e)
         {
-            PersoonToevoegen s = new PersoonToevoegen(_personenLijst, this);
+            PersoonToevoegen s = new PersoonToevoegen(this, DierenAsiel);
             s.Show();
         }
 
         private void DierToevoegenBtn_Click(object sender, RoutedEventArgs e)
         {
-            DierToevoegen s = new DierToevoegen(_dierenLijst, this, DierToevoegen.Formtype.Create);
+            DierToevoegen s = new DierToevoegen(DierenAsiel, this, DierToevoegen.Formtype.Create);
             s.Show();
         }
 
@@ -60,19 +50,20 @@ namespace DierenAsiel
             dierenListview.Items.Clear();
 
             //Vul de personenlistview
-            foreach (Persoon p in _personenLijst)
+            /*
+            foreach (Persoon p in dierenAsiel.Personen)
             {
                 personenListview.Items.Add(p);
             }
-
+            */
             //Vul de dierenlistview
-            foreach (Dier d in _dierenLijst)
+            foreach (Dier d in DierenAsiel.Dieren)
             {
                 dierenListview.Items.Add(d);
             }
 
             //Vul de reserveringen
-            foreach (Reservering r in _reserveringLijst)
+            foreach (Reservering r in DierenAsiel.Reserveringen)
             {
                 if (r.Ophaaldatum == datepicker.SelectedDate)
                 {
@@ -90,17 +81,17 @@ namespace DierenAsiel
             p.Straat = "Straat";
             p.Huisnummer = 10;
             p.Telefoonnummer = "0634810013";
-            _personenLijst.Add(p);
+            DierenAsiel.PersoonToevoegen(p);
 
             var d = new Dog();
             d.Naam = "DierNaam";
             d.GeboorteDatum = DateTime.Now.Date;
-            _dierenLijst.Add(d);
+            DierenAsiel.DierToevoegen(d);
 
             var k = new Cat();
             k.Naam = "test";
             k.GeboorteDatum = DateTime.Now.Date;
-            _dierenLijst.Add(k);
+            DierenAsiel.DierToevoegen(k);
         }
 
         private void reserveerBtnClick(object sender, RoutedEventArgs e)
@@ -117,7 +108,7 @@ namespace DierenAsiel
             TextRange allTextRange = new TextRange(notitieTextbox.Document.ContentStart, notitieTextbox.Document.ContentEnd);
             r.Note = allTextRange.Text;
             r.Ophaaldatum = reserveringDatum.SelectedDate.Value;
-            _reserveringLijst.Add(r);
+            DierenAsiel.ReserveringToevoegen(r);
             ViewLoader();
         }
 
@@ -128,7 +119,7 @@ namespace DierenAsiel
 
         private void beheerschermBtn_Click(object sender, RoutedEventArgs e)
         {
-            Dashboard db = new Dashboard(this._dierenLijst, this._personenLijst, this._reserveringLijst, this);
+            Dashboard db = new Dashboard(DierenAsiel, this);
             db.Show();
         }
 

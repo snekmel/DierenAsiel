@@ -22,25 +22,24 @@ namespace DierenAsiel
     {
         private MainWindow _mw;
         private Dashboard _dashboard;
-        private List<Persoon> _personenLijst;
-
+        private Models.DierenAsiel _dierenAsiel;
         private Persoon _selectedPerson;
 
-        public PersoonToevoegen(List<Persoon> personenLijst, MainWindow mw)
+        public PersoonToevoegen( MainWindow mw, Models.DierenAsiel d)
         {
             InitializeComponent();
-            _personenLijst = personenLijst;
             _mw = mw;
+            _dierenAsiel = d;
 
             ViewLoader();
         }
 
-        public PersoonToevoegen(List<Persoon> personenLijst, MainWindow mw, Persoon selectedPersoon, Dashboard db)
+        public PersoonToevoegen(MainWindow mw, Persoon selectedPersoon, Dashboard db, Models.DierenAsiel d)
         {
             InitializeComponent();
-            _personenLijst = personenLijst;
             _mw = mw;
             _selectedPerson = selectedPersoon;
+            _dierenAsiel = d;
             _dashboard = db;
 
             ViewLoader();
@@ -60,7 +59,7 @@ namespace DierenAsiel
                 p.Postcode = postcodeTb.Text;
                 p.Telefoonnummer = telefoonnmrTb.Text;
                 p.Email = emailTb.Text;
-                _personenLijst.Add(p);
+                _dierenAsiel.Personen.Add(p);
                 _mw.ViewLoader();
             }
 
