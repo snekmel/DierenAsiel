@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dal\DierMemoryContext.cs" />
+    <Compile Include="Dal\DierRepository.cs" />
+    <Compile Include="Dal\IDierContext.cs" />
     <Compile Include="Models\Cat.cs" />
     <Compile Include="Models\DierenAsiel.cs" />
     <Compile Include="Models\Dog.cs" />

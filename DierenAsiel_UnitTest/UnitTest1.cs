@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using DierenAsiel.Dal;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DierenAsiel.Models;
 
@@ -48,6 +50,16 @@ namespace DierenAsiel_UnitTest
 
             Assert.IsNotNull(_r.Dier);
             Assert.IsNotNull(_r.Persoon);
+        }
+
+
+        [TestMethod]
+        public void DalTester()
+        { 
+            DierMemoryContext dmc = new DierMemoryContext();
+            DierRepository dr = new DierRepository(dmc);
+            List<Dier> dieren = dr.GetAllDieren();
+            Assert.IsTrue(dieren.Count > 1);
         }
     }
 }

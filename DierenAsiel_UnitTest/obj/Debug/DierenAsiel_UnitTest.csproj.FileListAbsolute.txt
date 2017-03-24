@@ -6,3 +6,4 @@ C:\Users\Lars Lemkens\Desktop\Google Drive\Projecten\DierenAsiel\DierenAsiel_Uni
 C:\Users\Lars Lemkens\Desktop\Google Drive\Projecten\DierenAsiel\DierenAsiel_UnitTest\obj\Debug\DierenAsiel_UnitTest.csprojResolveAssemblyReference.cache
 C:\Users\Lars Lemkens\Desktop\Google Drive\Projecten\DierenAsiel\DierenAsiel_UnitTest\obj\Debug\DierenAsiel_UnitTest.dll
 C:\Users\Lars Lemkens\Desktop\Google Drive\Projecten\DierenAsiel\DierenAsiel_UnitTest\obj\Debug\DierenAsiel_UnitTest.pdb
+C:\Users\Lars Lemkens\Desktop\Google Drive\Projecten\DierenAsiel\DierenAsiel_UnitTest\bin\Debug\DierenAsiel.exe.config

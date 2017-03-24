@@ -8,9 +8,9 @@ namespace DierenAsiel.Models
 {
     public class DierenAsiel
     {
-        public List<Dier> Dieren { get; private set; }
-        public List<Persoon> Personen { get; private set; }
-        public List<Reservering> Reserveringen { get; private set; }
+        public List<Dier> Dieren { get;  set; }
+        public List<Persoon> Personen { get;  set; }
+        public List<Reservering> Reserveringen { get;  set; }
 
         public DierenAsiel()
         {

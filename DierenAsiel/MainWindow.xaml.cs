@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DierenAsiel.Dal;
 using DierenAsiel.Models;
 
 namespace DierenAsiel
@@ -19,14 +20,30 @@ namespace DierenAsiel
     public partial class MainWindow : Window
     {
 
-        public Models.DierenAsiel DierenAsiel { get; private set; }
-    
+        private Models.DierenAsiel _dierenAsiel = new Models.DierenAsiel();
+
+        public Models.DierenAsiel DierenAsiel
+        {
+            get { return _dierenAsiel; }
+            set { _dierenAsiel = value; }
+        }
+
+
         public MainWindow()
         {
             InitializeComponent();
-            datepicker.SelectedDate = DateTime.Today.Date;
-            DierenAsiel = new Models.DierenAsiel();
-            TestData();
+            datepicker.SelectedDate = DateTime.Today.Date;        
+
+            //----------------------------DAL
+            DierMemoryContext dmc = new DierMemoryContext();
+            DierRepository dr = new DierRepository(dmc);
+
+            foreach (var dier in dr.GetAllDieren())
+            {
+                _dierenAsiel.DierToevoegen(dier);
+            }
+            //----------------------------
+            
             ViewLoader();
         }
 
@@ -57,19 +74,21 @@ namespace DierenAsiel
             }
             */
             //Vul de dierenlistview
-            foreach (Dier d in DierenAsiel.Dieren)
+         
+            foreach (Dier d in _dierenAsiel.Dieren)
             {
                 dierenListview.Items.Add(d);
             }
 
             //Vul de reserveringen
-            foreach (Reservering r in DierenAsiel.Reserveringen)
+            foreach (Reservering r in _dierenAsiel.Reserveringen)
             {
                 if (r.Ophaaldatum == datepicker.SelectedDate)
                 {
                     ReserveringListview.Items.Add(r);
                 }
             }
+          
         }
 
         public void TestData()
@@ -83,15 +102,7 @@ namespace DierenAsiel
             p.Telefoonnummer = "0634810013";
             DierenAsiel.PersoonToevoegen(p);
 
-            var d = new Dog();
-            d.Naam = "DierNaam";
-            d.GeboorteDatum = DateTime.Now.Date;
-            DierenAsiel.DierToevoegen(d);
-
-            var k = new Cat();
-            k.Naam = "test";
-            k.GeboorteDatum = DateTime.Now.Date;
-            DierenAsiel.DierToevoegen(k);
+    
         }
 
         private void reserveerBtnClick(object sender, RoutedEventArgs e)

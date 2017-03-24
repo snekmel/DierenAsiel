@@ -8,17 +8,25 @@ namespace DierenAsiel.Models
 {
     public abstract class Dier
     {
+
+        public Dier()
+        {
+
+            Id = DateTime.Now;
+                
+        }
         public enum Geslacht
         {
             Man, Vrouw
         }
 
         //Privates
+        public DateTime Id { get; private set; }
         private string _naam;
-
         private DateTime _gebDatum;
         private Persoon _vorigeEigenaar;
         private Geslacht _geslacht;
+    
 
         //Getters / setters
         public Geslacht DierGeslacht
