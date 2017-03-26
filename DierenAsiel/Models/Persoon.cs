@@ -8,6 +8,11 @@ namespace DierenAsiel.Models
 {
     public class Persoon
     {
+
+        public Persoon()
+        {
+            this.Id = DateTime.Now.ToString();
+        }
         public enum Geslacht
         {
             Man, Vrouw
@@ -23,6 +28,7 @@ namespace DierenAsiel.Models
         private string _email;
 
         public Geslacht PersoonGeslacht { get; set; }
+        public string Id { get; private set; }
 
         public string Email
         {

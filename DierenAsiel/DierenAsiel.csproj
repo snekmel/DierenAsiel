@@ -57,6 +57,9 @@
     <Compile Include="Dal\DierMemoryContext.cs" />
     <Compile Include="Dal\DierRepository.cs" />
     <Compile Include="Dal\IDierContext.cs" />
+    <Compile Include="Dal\IPersoonContext.cs" />
+    <Compile Include="Dal\PersoonMemoryContext.cs" />
+    <Compile Include="Dal\PersoonRepository.cs" />
     <Compile Include="Models\Cat.cs" />
     <Compile Include="Models\DierenAsiel.cs" />
     <Compile Include="Models\Dog.cs" />

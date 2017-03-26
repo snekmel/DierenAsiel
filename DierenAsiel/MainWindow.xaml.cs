@@ -32,6 +32,7 @@ namespace DierenAsiel
         public MainWindow()
         {
             InitializeComponent();
+            System.Windows.MessageBox.Show(DateTime.Now.ToString());
             datepicker.SelectedDate = DateTime.Today.Date;        
 
             //----------------------------DAL
@@ -67,12 +68,11 @@ namespace DierenAsiel
             dierenListview.Items.Clear();
 
             //Vul de personenlistview
-            /*
-            foreach (Persoon p in dierenAsiel.Personen)
+
+            foreach (Persoon p in _dierenAsiel.Personen)
             {
                 personenListview.Items.Add(p);
             }
-            */
             //Vul de dierenlistview
          
             foreach (Dier d in _dierenAsiel.Dieren)

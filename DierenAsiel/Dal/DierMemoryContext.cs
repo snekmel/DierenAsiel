@@ -37,7 +37,7 @@ namespace DierenAsiel.Dal
             return _dieren;
         }
 
-        public Dier GetDierById(DateTime id)
+        public Dier GetDierById(string id)
         {
             foreach (var d in _dieren)
             {
@@ -50,7 +50,7 @@ namespace DierenAsiel.Dal
             return null;
         }
 
-        public void RemoveDierById(DateTime id)
+        public void RemoveDierById(string id)
         {
             foreach (var d in _dieren)
             {
@@ -61,7 +61,7 @@ namespace DierenAsiel.Dal
             }
         }
 
-        public void UpdateDierById(DateTime id, Dier d)
+        public void UpdateDierById(string id, Dier d)
         {
                 //
         }

@@ -13,10 +13,10 @@ namespace DierenAsiel.Dal
 
         List<Dier> GetAllDieren();
 
-        Dier GetDierById(DateTime id);
+        Dier GetDierById(string id);
 
-        void RemoveDierById(DateTime id);
+        void RemoveDierById(string id);
 
-        void UpdateDierById(DateTime id, Dier d);
+        void UpdateDierById(string id, Dier d);
     }
 }

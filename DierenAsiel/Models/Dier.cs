@@ -12,7 +12,7 @@ namespace DierenAsiel.Models
         public Dier()
         {
 
-            Id = DateTime.Now;
+            Id = DateTime.Now.ToString();
                 
         }
         public enum Geslacht
@@ -21,7 +21,7 @@ namespace DierenAsiel.Models
         }
 
         //Privates
-        public DateTime Id { get; private set; }
+        public string Id { get; private set; }
         private string _naam;
         private DateTime _gebDatum;
         private Persoon _vorigeEigenaar;
