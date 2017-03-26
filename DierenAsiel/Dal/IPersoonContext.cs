@@ -10,6 +10,10 @@ namespace DierenAsiel.Dal
     public interface IPersoonContext
     {
 
+
+        //all
+        List<Persoon> GetAllPersonen();
+
         //create
         void AddPersoon(Persoon p);
 

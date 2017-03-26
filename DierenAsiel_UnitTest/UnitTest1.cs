@@ -54,7 +54,7 @@ namespace DierenAsiel_UnitTest
 
 
         [TestMethod]
-        public void DalTester()
+        public void DierDalTest()
         { 
             DierMemoryContext dmc = new DierMemoryContext();
             DierRepository dr = new DierRepository(dmc);
@@ -62,5 +62,18 @@ namespace DierenAsiel_UnitTest
             Assert.IsTrue(dieren.Count > 1);
         }
 
+
+        [TestMethod]
+        public void PersoonDalTest()
+        {
+            PersoonMemoryContext pmc = new PersoonMemoryContext();
+            PersoonRepository pr = new PersoonRepository(pmc);
+
+            List<Persoon> plijst = pr.GetAllPersonen();
+
+            Assert.IsNotNull(plijst);
+           Assert.IsNotNull(plijst[0].Naam);
+            Assert.IsTrue(plijst.Count > 0);
+        }
     }
 }

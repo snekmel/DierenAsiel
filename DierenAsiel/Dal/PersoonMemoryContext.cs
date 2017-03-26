@@ -16,8 +16,18 @@ namespace DierenAsiel.Dal
         public PersoonMemoryContext()
         {
             _personen = new List<Persoon>();
+
+            Persoon persoon = new Persoon();
+            persoon.Naam = "Lars";
+            persoon.Achternaam = "Achternaam";
+            persoon.Email = "larslemkens@gmail.com";
+
+            _personen.Add(persoon);
+
         }
 
+
+        
         public int PersonenCount()
         {
             return _personen.Count;
@@ -52,6 +62,11 @@ namespace DierenAsiel.Dal
         public void DeletePersoonById(string id)
         {
             _personen.RemoveAll(p => p.Id == id);
+        }
+
+        public List<Persoon> GetAllPersonen()
+        {
+            return _personen;
         }
     }
 }

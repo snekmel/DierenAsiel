@@ -37,5 +37,10 @@ namespace DierenAsiel.Dal
         {
             _interface.DeletePersoonById(id);
         }
+
+        public List<Persoon> GetAllPersonen()
+        {
+            return _interface.GetAllPersonen();
+        }
     }
 }
